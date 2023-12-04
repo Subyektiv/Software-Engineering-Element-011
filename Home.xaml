@@ -1,0 +1,201 @@
+﻿<Window x:Class="BudgetBuddy.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BudgetBuddy"
+        mc:Ignorable="d"
+        Title="Budget Buddy" Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen"
+        Icon="./images/appicon.ico">
+    
+    <Grid Background="#F4F6F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0"
+                    Background="#116F59">
+
+            <Image Height="48" Width="48" Source="/images/user96.png"
+                   Margin="0,40,0,0"/>
+
+            
+            <!--Analytics Button-->
+            <Button x:Name="AnalyticsBtn" Width="150" Height="60" Margin="0,40,0,0" Click="AnalyticsBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Images/dashboardicon.png" Width="32" Height="32" />
+
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Content>
+                    <TextBlock Text="Analytics" FontSize="14" VerticalAlignment="Center" Foreground="White"/>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray" />
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <!-- Add other hover effects as needed -->
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!--Income button-->
+            <Button x:Name="IncomeBtn" Width="150" Height="60" Click="IncomeBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Images/incomeicon.png" Width="32" Height="32" />
+
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Content>
+                    <TextBlock Text="Income" FontSize="14" VerticalAlignment="Center" Foreground="White"/>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray" />
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <!-- Add other hover effects as needed -->
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!--Expense button-->
+            <Button x:Name="ExpenseBtn" Width="150" Height="60" Click="ExpenseBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Images/expenseicon.png" Width="32" Height="32" />
+
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Content>
+                    <TextBlock Text="Expense" FontSize="14" VerticalAlignment="Center" Foreground="White"/>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray" />
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <!-- Add other hover effects as needed -->
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!--Help button-->
+            <Button x:Name="HelpBtn" Width="150" Height="60" Margin="0,260,0,0" Click="HelpBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Images/helpicon.png" Width="32" Height="32" />
+
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Content>
+                    <TextBlock Text="Help" FontSize="14" VerticalAlignment="Center" Foreground="White"/>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray" />
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <!-- Add other hover effects as needed -->
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!--Settings button-->
+            <Button x:Name="SettingsBtn" Width="150" Height="60" Margin="0,0,0,0" Click="SettingsBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Images/settingsicon.png" Width="32" Height="32" />
+
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Content>
+                    <TextBlock Text="Settings" FontSize="14" VerticalAlignment="Center" Foreground="White"/>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray" />
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <!-- Add other hover effects as needed -->
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

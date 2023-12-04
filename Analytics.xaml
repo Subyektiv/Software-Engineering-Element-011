@@ -1,0 +1,167 @@
+﻿<Page x:Class="BudgetBuddy.Analytics"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BudgetBuddy"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1120"
+      Title="Analytics">
+
+    <Grid Background="#F4F6F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0"
+                    Margin="20">
+            <Label Content="This Month" FontSize="26"
+                   Margin="0,0,0,0"/>
+
+            <StackPanel Margin="20" Orientation="Horizontal">
+
+                <Border Width="300" Height="200"
+                        Background="#844eff"
+                        CornerRadius="20"
+                        Margin="0,0,30,0">
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Total Entries Made"
+                                   FontSize="24" Foreground="White"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="totalEntriesMade" Text="0"
+                                   FontSize="42" Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,40,0,0"/>
+
+                    </StackPanel>
+
+
+                </Border>
+
+                <Border Width="300" Height="200"
+                        Background="#52BE80"
+                        CornerRadius="20"
+                        Margin="0,0,30,0">
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Total Income Amount"
+                                   FontSize="24" Foreground="White"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="totalIncomeAmount" Text="0"
+                                   FontSize="42" Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,40,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Rectangle Width="2" Height="160" 
+                           Margin="0,0,30,0"
+                           Fill="LightGray" />
+
+                <Border Width="300" Height="200"
+                        Background="#EC7063"
+                        CornerRadius="20"
+                        Margin="0,0,0,0">
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Total Expense Amount"
+                                   FontSize="24" Foreground="White"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="totalExpenseAmount" Text="0"
+                                   FontSize="42" Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,40,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1"
+                    Margin="20,0,20,0">
+            <Label Content="This Year" FontSize="26"
+                   Margin="0,0,0,0"/>
+
+            <StackPanel Margin="20" Orientation="Horizontal">
+
+                <Border Width="300" Height="200"
+                        Background="#844eff"
+                        CornerRadius="20"
+                        Margin="0,0,30,0">
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Total Entries Made"
+                                   FontSize="24" Foreground="White"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="totalEntriesMadeThisYear" Text="0"
+                                   FontSize="42" Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,40,0,0"/>
+
+                    </StackPanel>
+
+
+                </Border>
+
+                <Border Width="300" Height="200"
+                        Background="#52BE80"
+                        CornerRadius="20"
+                        Margin="0,0,30,0">
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Total Income Amount"
+                                   FontSize="24" Foreground="White"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="totalIncomeAmountThisYear" Text="0"
+                                   FontSize="42" Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,40,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Rectangle Width="2" Height="160" 
+                           Margin="0,0,30,0"
+                           Fill="LightGray" />
+
+                <Border Width="300" Height="200"
+                        Background="#EC7063"
+                        CornerRadius="20"
+                        Margin="0,0,0,0">
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Total Expense Amount"
+                                   FontSize="24" Foreground="White"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="totalExpenseAmountThisYear" Text="0"
+                                   FontSize="42" Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,40,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

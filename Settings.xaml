@@ -1,0 +1,53 @@
+﻿<Page x:Class="BudgetBuddy.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BudgetBuddy"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1120"
+      Title="Settings">
+
+    <Grid Background="#F4F6F6">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="40">
+            <Label Content="Settings" FontSize="24" FontWeight="Bold"
+                   Margin="0,0,0,0" HorizontalAlignment="Center"/>
+
+
+            <Label Content="Budget Buddy - Empowering your Finances" Margin="0,20,0,0"/>
+
+            <Label Content="Guidelines" FontWeight="Bold"/>
+            <Label Content="Carefully read and follow the adhere guidelines to safely import and export the data."/>
+            <Label Content="Make Sure there is no data in the system. If you import multiple times it could create redundant data"/>
+            <Label Content="Typically you need the import feature when you are migrating from one device to another"/>
+            <Label Content="The Budget Buddy uses SQLite and the data is intended to be available to its current user/owner only"/>
+            <Label Content="The user data is not stored in any centralized database and only user has the access to the data."/>
+
+            <Label Content="Exporting the data is always safe thing to do."/>
+            <Label Content="Users can export the data at their convenience or at the time of migrating from one pc to another."/>
+
+            <Label Content="Change Password" FontSize="18" FontWeight="Bold"
+                   Margin="0,60,0,10" HorizontalAlignment="Center"/>
+
+            <Label Content="Enter the old Password." HorizontalAlignment="Center"/>
+            <TextBox Width="200" HorizontalAlignment="Center" FontSize="14"
+                     x:Name="oldPassTxt"/>
+            <Label Content="Enter the New Password" HorizontalAlignment="Center"
+                   Margin="0,20,0,0"/>
+            <TextBox Width="200" HorizontalAlignment="Center" FontSize="14"
+                     x:Name="newPassTxt"/>
+
+            <Button Content="Change" FontSize="14"
+                    Width="160" Height="32"
+                    Margin="0,20,0,0"
+                    x:Name="changePass" Click="changePass_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
